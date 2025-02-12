@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "start": "live-server . --port=3000 --host=localhost --no-browser",
+    "start": "live-server . --port=3000 --host=localhost",
     "format": "prettier . --check"
   },
   "devDependencies": {
