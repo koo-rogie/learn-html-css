@@ -1,11 +1,70 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko-KR">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>테이블</title>
-</head>
-<body>
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid currentColor;
+        border-spacing: 0;
+        border-collapse: collapse;
+      }
+      table {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
     <h1>테이블</h1>
-</body>
+    <table>
+      <caption>
+        멋쟁이 사자 프론트엔드 스쿨 13기 스탭
+      </caption>
+      <colgroup>
+        <col />
+        <col span="2" class="aaa"/>
+        <col />
+    </colgroup>
+      <thead>
+        <tr>
+          <th scope="col">번호</th>
+          <th scope="col">강사진</th>
+          <th scope="col">맨토진</th>
+          <th scope="col">운영진</th>
+        </tr>
+      </thead>
+      <tfoot>
+        <tr>
+          <th scope="row">인원수</th>
+          <td>2명</tds>
+          <td>2명</td>
+          <td>2명</td>
+        </tr>
+      </tfoot>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>슬비쌤</td>
+          <td>권석기</td>
+          <td>금윤호</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>용쌤</td>
+          <td>유진혁</td>
+          <td>김미리</td>
+        </tr>
+        <tr>
+            <td colspan="2" rowspan="2"> &nbsp; </td>
+            <td colspan="2"> &nbsp; </td>
+        </tr>
+        <tr>
+            <td colspan="2"> &nbsp; </td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
 </html>
