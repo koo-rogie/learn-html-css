@@ -1,7 +1,7 @@
 div {
   max-width: 800px;
   min-width: 300px;
-  margin: 0 auto;
+  margin: 10px auto;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 20px;
   padding: 20px;
