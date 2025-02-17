@@ -1,11 +1,25 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko-KR">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>프래이징 요소</title>
-</head>
-<body>
-    <h1>프레이징 요소</h1>
-</body>
+  </head>
+  <body>
+    <h1>텍스트 레벨 시멘틱 요소</h1>
+    <div class="test">
+      <p><em>무엇이 중요한지 알게된 시간!</em></p>
+      <p>
+        제가 들었던 해외 튜토리얼에 비해 <strong>시맨틱한 마크업</strong>과
+        <strong>접근성</strong> 비중이 크게 다뤄져 좋았습니다. 많은 튜토리얼들이
+        디자인을 어떻게 구현하는지에만 초점이 맞춰져 있잖아요. 무엇이 중요한지
+        알게되어 많은 도음이 되었습니다.
+      </p>
+      <p>
+        <span aria-hidden="true">★★★★★</span>
+        <b><span class="sr-only">강의 평점</span>5점</b>
+        <i><span class="sr-only">수강생</span>우정민</i>
+      </p>
+    </div>
+  </body>
 </html>
