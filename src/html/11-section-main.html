@@ -1,11 +1,35 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko-KR">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>섹션과 메인요소</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <h1>섹션과 메인요소</h1>
+    <div id="container-div">
+      <header>머리말</header>
+      <nav>메뉴</nav>
+      <main>
+        <div class="contents">
+          <section>콘텐츠</section>
+          <section>콘텐츠</section>
+        </div>
+        <aside>부가정보</aside>
+      </main>
+      <footer>바닥글</footer>
+    </div>
+    <div id="container-role">
+      <div role="banner">본문배너</div>
+      <div role="navigation">내비게이션</div>
+      <div role="main">
+        <div class="contats">
+          <div role="article">섹션해더</div>
+          <div role="article">섹션해더</div>
+        </div>
+        <div role="slider">부가건텐츠</div>
+      </div>
+      <div role="contentinfo">본문 푸터</div>
+    </div>
+  </body>
 </html>
