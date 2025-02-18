@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>video와 source 요소</title>
+  </head>
+  <body>
+    <h1>video와 source 요소</h1>
+    <div style="display: none">
+      <p>과거 video 사용 방법</p>
+      <video controls>
+        <source
+          src="/src/assets/video/google-developer-stories.mp4"
+          type="video/mp4"
+        />
+        <source
+          src="/src/assets/video/google-developer-stories.ogg"
+          type="video/ogg"
+        />
+        <source
+          src="/src/assets/video/google-developer-stories.mov"
+          type="video/mov"
+        />
+        <source
+          src="/src/assets/video/google-developer-stories.webm"
+          type="video/webm"
+        />
+      </video>
+    </div>
+    <div>
+      <video controls muted poster="/src/assets/video/poster.jpg">
+        <source src="/src/assets/video/google-developer-stories.mp4" />
+        <track
+          src="/src/assets/video/stories-en.vtt"
+          kind="captions"
+          srclang="en"
+          label="English Caption"
+        />
+      </video>
+    </div>
+  </body>
+</html>
