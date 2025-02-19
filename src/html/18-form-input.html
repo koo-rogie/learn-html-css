@@ -8,27 +8,44 @@
   <body>
     <h1>form, input요소</h1>
     <div class="form">
-      <h2>form 요소</h2>
-      <form action="/">
+      <h2>input요소</h2>
+      <form action="/" method="post">
         <fieldset>
           <legend>폼 서식</legend>
           <div>
             <label for="userName">이름 : </label>
-            <input type="text" id="userName" />
+            <input
+              type="text"
+              id="userName"
+              required
+              aria-required="true"
+              placeholder="홍길동"
+              name="userName"
+            />
           </div>
           <div>
             <label for="userPwd">비밀번호 : </label>
-            <input type="password" id="userPwd" />
+            <input
+              type="password"
+              id="userPwd"
+              name="userPwd"
+              required
+              placeholder="8자리 이상 입력"
+            />
           </div>
           <div>
             <label for="likelionSearch">검색 : </label>
-            <input type="search" id="likelionSearch" />
+            <input type="search" id="likelionSearch" name="likelionSearch" />
           </div>
+          <div>
+            <label for="userEmail">이메일 : </label>
+            <input type="email" id="userEmail" required name="userEmail" />
+          </div>
+
+          <input type="submit" value="전송" />
         </fieldset>
       </form>
     </div>
-    <div class="input">
-      <h2>input요소</h2>
-    </div>
+    <div class=""></div>
   </body>
 </html>
