@@ -6,8 +6,12 @@ div {
   border-radius: 20px;
   padding: 20px;
 }
-
-h1 {
+h1{
+  text-align: center;
+  font-size: 3em;
+  text-transform: uppercase;
+}
+h2 {
   text-align: center;
   font-size: 2.5em;
 }
