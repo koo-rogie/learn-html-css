@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>form select textarea 요소</title>
+    <style>
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip-path: inset(50%);
+        border: 0;
+        clip: rect(0 0 0 0);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>form select textarea 요소</h1>
+    <div class="select-option">
+      <form action="/" method="post">
+        <div>
+          <label for="patSelect">반려동물</label>
+          <select name="patSelect" id="patSelect">
+            <option value="">반려동물 선택</option>
+            <option value="dog">강아지</option>
+            <option value="cat">고양이</option>
+            <option value="rabbit">토끼</option>
+            <option value="hamster">햄스터</option>
+            <option value="parrot">앵무새</option>
+            <option value="goldsfish">열대어</option>
+          </select>
+        </div>
+      </form>
+    </div>
+    <hr />
+    <div class="textarea">
+      <form action="/" method="post">
+        <div>
+          <label for="message"
+            >내용 <span aria-hidden="true">*</span
+            ><span class="sr-only">필수</span></label
+          >
+          <textarea
+            placeholder="메세지"
+            name="message"
+            id="message"
+            cols="50"
+            rows="20"
+          ></textarea>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
