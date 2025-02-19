@@ -12,7 +12,7 @@
       <form action="/" method="post">
         <fieldset>
           <legend>폼 서식</legend>
-          <div>
+          <div class="text">
             <label for="userName">이름 : </label>
             <input
               type="text"
@@ -21,9 +21,12 @@
               aria-required="true"
               placeholder="홍길동"
               name="userName"
+              maxlength="5"
+              minlength="2"
             />
           </div>
-          <div>
+          <hr />
+          <div class="password">
             <label for="userPwd">비밀번호 : </label>
             <input
               type="password"
@@ -33,15 +36,57 @@
               placeholder="8자리 이상 입력"
             />
           </div>
-          <div>
+          <hr />
+          <div class="search">
             <label for="likelionSearch">검색 : </label>
             <input type="search" id="likelionSearch" name="likelionSearch" />
           </div>
-          <div>
+          <hr />
+          <div class="email">
             <label for="userEmail">이메일 : </label>
             <input type="email" id="userEmail" required name="userEmail" />
           </div>
-
+          <hr />
+          <div class="tel">
+            <label for="uesrPhone">연락처 : </label>
+            <input type="tel" id="uesrPhone" required name="uesrPhone" />
+          </div>
+          <hr />
+          <div class="checkbox">
+            <div>
+              <input
+                type="checkbox"
+                checked
+                name="classLikelion"
+                id="classHtml"
+                value="html"
+              />
+              <label for="classHtml">html</label>
+            </div>
+            <div>
+              <input type="checkbox" name="classLikelion" id="classCss" value="css"/>
+              <label for="classCss">css</label>
+            </div>
+            <div>
+              <input type="checkbox" name="classLikelion" id="classJs" value="js"/>
+              <label for="classJs">js</label>
+            </div>
+          </div>
+          <hr />
+          <div class="radio">
+            <div>
+              <input type="radio" name="classRoom" id="classRoom1" value="회고 1팀" />
+              <label for="classRoom1">회고 1팀</label>
+            </div>
+            <div>
+              <input type="radio" name="classRoom" id="classRoom2" value="회고 2팀" />
+              <label for="classRoom2">회고 2팀</label>
+            </div>
+            <div>
+              <input type="radio" name="classRoom" id="classRoom3" value="회고 3팀" />
+              <label for="classRoom3">회고 3팀</label>
+            </div>
+          </div>
           <input type="submit" value="전송" />
         </fieldset>
       </form>
