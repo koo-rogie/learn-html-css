@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>form button 요소</title>
+  </head>
+  <body>
+    <h1>버튼요소</h1>
+    <form action="/" method="post" id="buttonForm">
+      <div>
+        <label for="user">사용자 이름</label>
+        <input type="text" id="user" />
+      </div>
+      <hr />
+      <div>
+        <label for="user">사용자 암호</label>
+        <input type="password" id="user" />
+      </div>
+      <hr />
+      <div>
+        <input type="submit" value="전송" />
+        <input type="reset" value="초기화" />
+        <input type="button" value="Clike Me!" />
+      </div>
+      <hr />
+      <div>
+        <button type="submit">전송</button>
+        <button type="reset">초기화</button>
+        <button type="button">클릭!</button>
+      </div>
+    </form>
+    <div>
+      <button type="submit">
+        <img src="/src/assets/icon/search.svg" alt="alt-전송하기" />
+      </button>
+      <button type="submit" aria-label="aria-label-전송하기">
+        <img src="/src/assets/icon/search.svg" alt="" />
+      </button>
+      <button type="submit" aria-label="aria-label-검색하기">
+        <svg
+          width="12"
+          height="12"
+          viewBox="0 0 12 12"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          
+        >
+        <title>title-검색</title>
+          <path
+            id="Union"
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M7.14574 8.55995C6.45201 8.99709 5.63054 9.25 4.75 9.25C2.26472 9.25 0.25 7.23528 0.25 4.75C0.25 2.26472 2.26472 0.25 4.75 0.25C7.23528 0.25 9.25 2.26472 9.25 4.75C9.25 5.63054 8.99709 6.45201 8.55995 7.14574L11.4571 10.0429C11.8476 10.4334 11.8476 11.0666 11.4571 11.4571C11.0666 11.8476 10.4334 11.8476 10.0429 11.4571L7.14574 8.55995ZM7.25 4.75C7.25 6.13071 6.13071 7.25 4.75 7.25C3.36929 7.25 2.25 6.13071 2.25 4.75C2.25 3.36929 3.36929 2.25 4.75 2.25C6.13071 2.25 7.25 3.36929 7.25 4.75Z"
+            fill="#181818"
+          />
+        </svg>
+      </button>
+    </div>
+    <hr />
+    <button type="reset" form="buttonForm">초기화</button>
+  </body>
+</html>
