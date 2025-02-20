@@ -1,0 +1,37 @@
+*{
+    box-sizing: content-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    color: olive;
+    margin: 0px;
+}
+h1 {
+  font-size: 1em;
+}
+
+.ai {
+  background-color: orange;
+}
+
+body h2 + p {
+  background-color: pink;
+}
+
+body p[class] {
+  background-color: wheat;
+}
+
+#ai{
+    background-color: red;
+}
+
+.ai.copilot{
+    border: 10px dotted black;
+}
+
+a{
+    color: inherit;
+}
