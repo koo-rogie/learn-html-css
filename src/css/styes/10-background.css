@@ -1,0 +1,19 @@
+/* 배경 색상 */
+body {
+  background-color: hsl(180, 50%, 50%);
+  background-image: url(/src/assets/images/rabbit.png);
+  background-repeat: repeat-x;
+  background-repeat: repeat-y;
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  min-height: 100vh;
+  border: 1px solid black;
+  background-attachment: fixed;
+  background-size: 300px 500px;
+  /* 위에는 속성을 각각 줄 수 있음 */
+  /* 아래는 숏헨드 기법? */
+  background:
+    url(/src/assets/images/cloud.png) 0px 100px no-repeat fixed,
+    url(/src/assets/images/sun.png) no-repeat 100px 50px/150px 150px fixed,
+    linear-gradient(to left, red, green);
+}
