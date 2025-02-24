@@ -1,0 +1,116 @@
+/* 전역 변수 정의 */
+:root {
+  /* 색상 팔레트 */
+  --white: #fff;
+  --black: #000;
+  --red: #f00;
+  --green: #0f0;
+  --blue: #00f;
+  --orange: orange;
+  --yellow: yellow;
+  --light-blue: aqua;
+
+  /* 주요 색상 */
+  --primary-color: ;
+  --secondary-color: ;
+  --accent-color: ;
+
+  /* size */
+  --small: 0.75rem;
+  --medium: 0.875rem;
+  --default: 1rem;
+  --large: 1.125rem;
+}
+.text-card-1 {
+  /* 지역 변수 정의 */
+  --bg-color: var(--green);
+  --border-color: var(--red);
+
+  /* --secondary-color 속성이 없을 때 대안으로 #2ecc71가 적용되도록 설정 */
+  h1 {
+    background-color: --primary-color; /* 잘못 사용된 예제 */
+    background-color: var(--primary-color); /* 잘된 사용 예제 */
+    background-color: var(
+      --primary-color,
+      #2ecc71
+    ); /* 만약 변수의 이름이 변경됐을때 2순위 색을 지정하는 것 */
+    background-color: var(--bg-color);
+  }
+
+  p {
+    border-width: 10px;
+    border-style: solid;
+    border-color: var(--border-color);
+  }
+}
+
+.text-card-2 {
+  /* 지역 변수 정의 */
+  --bg-color: var(--blue);
+  --border-color: var(--green);
+
+  /* --secondary-color 속성이 없을 때 대안으로 #2ecc71가 적용되도록 설정 */
+  h1 {
+    background-color: --primary-color; /* 잘못 사용된 예제 */
+    background-color: var(--primary-color); /* 잘된 사용 예제 */
+    background-color: var(
+      --primary-color,
+      #2ecc71
+    ); /* 만약 변수의 이름이 변경됐을때 2순위 색을 지정하는 것 */
+    background-color: var(--bg-color);
+  }
+
+  p {
+    border-width: 10px;
+    border-style: solid;
+    border-color: var(--border-color);
+  }
+}
+
+/* 전역변수를 사용하여 버튼 생성 */
+.wrapper-1 {
+  button {
+    &.default {
+      font-size: var(--default);
+    }
+    &.small {
+      font-size: var(--small);
+    }
+    &.medium {
+      font-size: var(--medium);
+    }
+    &.large {
+      font-size: var(--large);
+    }
+  }
+}
+/* 지역변수를 사용하여 만듬 */
+.wrapper-2 {
+  button {
+    font-size: var(--font-size, red);
+    background-color: var(--bg-color, #fff);
+    color: var(--red);
+    &.open {
+      --font-size: var(--default);
+      --bg-color: var(--green);
+
+      font-size: var(--font-size);
+      background-color: var(--green);
+    }
+    &.close {
+      --font-size: var(--small);
+
+      font-size: var(--font-size);
+    }
+    &.popup {
+      --font-size: var(--medium);
+
+      font-size: var(--font-size);
+    }
+    &.info {
+      --font-size: var(--large);
+
+      font-size: var(--font-size);
+    }
+  }
+}
