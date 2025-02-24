@@ -1,0 +1,47 @@
+@import url(/src/common/mini-reset.css);
+
+body {
+  background-color: wheat;
+  margin: 50px;
+}
+
+h1 {
+  margin-bottom: 50px;
+}
+
+/* 알림 */
+.notification {
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  position: relative;
+  margin-bottom: 20px;
+  
+  span {
+    display: block;
+    padding: 20px;
+    background: url(/src/assets/svg/pot.svg) center center no-repeat;
+  }
+  div {
+    .notification-subject {
+      font-size: 1.5rem;
+      font-weight: 500;
+      color: #22be61;
+    }
+    .notification-time {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      color: #22be61;
+    }
+    .notification-content {
+      font-size: 0.9rem;
+      color: #929b90;
+    }
+  }
+}
