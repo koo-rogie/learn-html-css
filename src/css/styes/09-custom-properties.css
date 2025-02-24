@@ -1,4 +1,10 @@
 /* 전역 변수 정의 */
+@property --text-color {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: orange;
+}
+
 :root {
   /* 색상 팔레트 */
   --white: #fff;
@@ -11,15 +17,17 @@
   --light-blue: aqua;
 
   /* 주요 색상 */
-  --primary-color: ;
-  --secondary-color: ;
-  --accent-color: ;
+  --primary-color: var(--orange);
+  --secondary-color: var(--light-blue);
+  --accent-color: var(--yellow);
+  --border-color: var(--red);
 
   /* size */
   --small: 0.75rem;
   --medium: 0.875rem;
   --default: 1rem;
   --large: 1.125rem;
+  --text12: 0.75rem;
 }
 .text-card-1 {
   /* 지역 변수 정의 */
@@ -111,6 +119,36 @@
       --font-size: var(--large);
 
       font-size: var(--font-size);
+    }
+  }
+}
+
+.container {
+  /* --text-color: var(--orange); */
+  color: var(--text-color);
+  .parent {
+    --text-color: blue;
+
+    .child {
+      color: var(--text-color);
+    }
+  }
+}
+
+.lion {
+  color: red;
+  border: 1px solid green;
+  padding: 0.5em;
+
+  .parent {
+    border: inherit;
+    padding: inherit;
+    margin: 0;
+    .child {
+      color: black;
+      border: inherit;
+      padding: inherit;
+      border-color: blue;
     }
   }
 }
