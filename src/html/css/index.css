@@ -1,3 +1,9 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+}
+
 div {
   max-width: 800px;
   min-width: 300px;
@@ -14,9 +20,18 @@ h1{
 h2 {
   text-align: center;
   font-size: 2.5em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
 }
-
+ul{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
 li {
+  width: 40%;
   list-style: none;
   padding-left: 20px;
   position: relative;

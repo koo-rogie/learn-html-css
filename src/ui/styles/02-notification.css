@@ -21,7 +21,7 @@ h1 {
   width: 100%;
   position: relative;
   margin-bottom: 20px;
-  
+
   span {
     display: block;
     padding: 20px;
@@ -43,5 +43,38 @@ h1 {
       font-size: 0.9rem;
       color: #929b90;
     }
+  }
+}
+
+:root {
+  --main-color: #040404;
+  --sub-color: #6d7478;
+  --point-color: #01a9ff;
+}
+
+.warther-box {
+  border: 1px solid #ebebea;
+  background-color: #fff;
+  padding: 16px 8px;
+  border-radius: 8px;
+  position: relative;
+  .text-box {
+    .title {
+      font-size: 20px;
+      font-weight: 900;
+      color: var(--main-color);
+    }
+    .subtitle {
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--sub-color);
+    }
+  }
+  .img-box{
+    display: inline-block;
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
   }
 }
