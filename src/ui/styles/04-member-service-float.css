@@ -1,10 +1,25 @@
 body {
   font-family: 'SUIT', sans-serif;
+  /* 스타일 초기화 */
+  margin: 0;
+  padding: 0;
+  *,
+  *::after,
+  *&::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
   a {
     text-decoration: none;
     text-transform: uppercase;
     color: #000;
   }
+  ul,
+  li {
+    list-style: none;
+  }
+  
 }
 
 /* 멤버 서비스(a) */
