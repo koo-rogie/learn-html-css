@@ -1,0 +1,38 @@
+@import '/src/common/theme.css';
+
+body{
+    background-color: var(--pastel-ivory);
+}
+/* css의 display 속성으로 특정 영역이 보이지 않도록 설정 */
+/* .mom-friend-son{
+    display: none;
+} */
+
+.card {
+  background: var(--pastel-pink);
+  border: 1px solid green;
+  .thumbnail {
+    background-color: var(--pastel-yellow);
+    /* float 요소의 부모에 직접 높이를 지정해서 일반 흐름을 벗어난 이미지가 다음 콘텐츠 영역 레이아웃에 영향을 주는 것을 피할 수 있음. */
+    /* height: 142px; */
+    /* overflow: auto; */
+    /* display: flow-root; */
+    /* width: 100%; */
+    
+    float: left;
+    img {
+      /* float: left; */
+      width: 100px;
+      vertical-align: middle;
+      /* display: block; */
+    }
+  }
+  .subject {
+    background-color: var(--pastel-blue);
+  }
+  .content {
+    /* float 효과를 해제하기 위해 clear 속성을 사용할 수 있다 */
+    clear: both;
+    background-color: var(--pastel-orange);
+  }
+}

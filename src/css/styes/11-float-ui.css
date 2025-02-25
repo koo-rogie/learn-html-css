@@ -1,0 +1,55 @@
+@import '/src/common/modern-reset.css';
+@import '/src/common/theme.css';
+body {
+  font-family: SUIT, sans-serif;
+}
+.card {
+  /* background: var(--pastel-pink); */
+  border: 1px solid black;
+  border-radius: 0.5rem;
+  margin: 2em;
+  padding: 2em;
+  /* 독립적인 레이아웃 */
+  &.good-partner{
+      display: flow-root;
+
+  }
+
+  /* 제목 */
+  .subject {
+    /* background-color: var(--pastel-mint); */
+
+    font-size: 1.5rem;
+    font-weight: 600;
+    span {
+      vertical-align: top;
+      &[lang] {
+        font-size: 0.5em;
+      }
+    }
+  }
+  /* 이미지 */
+  .thumbnail {
+    /* 지역변수 */
+    --radius: 50%;
+    
+    float: left;
+    border: 1px solid #ccc;
+    margin: 0.5em;
+    padding: 0.5em;
+    border-radius: var(--radius);
+    width: 120px;
+    shape-outside: circle(50%);
+    img {
+      width: 100px;
+      border-radius: var(--radius);
+      aspect-ratio: 1/1;
+      object-fit: cover;
+      object-position: 0 -16px;
+    }
+  }
+  /* 내용 */
+  .content{
+    margin-top: 0.625rem;
+  }
+}
