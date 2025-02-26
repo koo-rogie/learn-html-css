@@ -6,7 +6,7 @@
 /* clamp() 함수를 이용해서 글자 크기를 유연하게 설정가능 */
 body {
   background: yellow;
-  font-size: clamp(.75rem, 2vw, 3rem);
+  font-size: clamp(0.75rem, 2vw, 3rem);
 
   /* 사용자의 화면에 따라 달라질 배경색 */
   @media (min-width: 600px) {

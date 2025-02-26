@@ -1,0 +1,117 @@
+@import '/src/common/modern-reset.css';
+
+:root {
+  --padding: 16px 8px 16px 16px;
+  --color-gaye: #6d7478;
+  --color-bk: #040404;
+  --font-size-20: 1.25rem;
+  --font-size-12: 0.75rem;
+  --border: #ebebea;
+}
+
+body {
+  width: 500px;
+  margin: 20px auto;
+  font-family:
+    'Pretendard Variable',
+    Pretendard,
+    -apple-system,
+    BlinkMacSystemFont,
+    system-ui,
+    Roboto,
+    'Helvetica Neue',
+    'Segoe UI',
+    'Apple SD Gothic Neo',
+    'Noto Sans KR',
+    'Malgun Gothic',
+    'Apple Color Emoji',
+    'Segoe UI Emoji',
+    'Segoe UI Symbol',
+    sans-serif;
+}
+
+/* 인라인 요소를 활용해 만듦 */
+.inline-wraper {
+  .wadthers {
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: var(--padding);
+    display: inline-block;
+  }
+  .text-wraper {
+    display: inline-block;
+
+    p {
+      font-size: var(--font-size-20);
+      color: var(--color-bk);
+      font-weight: 500;
+      margin-bottom: 0.6rem;
+    }
+    span {
+      font-size: var(--font-size-12);
+      color: var(--color-gaye);
+    }
+  }
+
+  figure {
+    display: inline-block;
+    margin-left: 10px;
+    img {
+      width: 50px;
+      aspect-ratio: 1/1;
+      vertical-align: middle;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border-width: 0;
+    }
+  }
+}
+
+.float-weather {
+  display: flow-root;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: var(--padding);
+
+  .text-wraper {
+    float: left;
+    p {
+      font-size: var(--font-size-20);
+      color: var(--color-bk);
+      font-weight: 500;
+      margin-bottom: 0.6rem;
+    }
+    span {
+      font-size: var(--font-size-12);
+      color: var(--color-gaye);
+    }
+  }
+  figure {
+    float: right;
+    iimg {
+      width: 50px;
+      aspect-ratio: 1/1;
+      vertical-align: middle;
+    }
+  }
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+}
