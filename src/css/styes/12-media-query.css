@@ -1,15 +1,19 @@
+@import '/src/common/modern-reset.css';
+@import '/src/common/a11y.css';
+
+/* 모든 디바이스 */
+/* 모든 디바이스에 글자 크기를 유연하게 설정 - vw */
+/* clamp() 함수를 이용해서 글자 크기를 유연하게 설정가능 */
 body {
   background: yellow;
-  font-size: 1.25rem;
+  font-size: clamp(.75rem, 2vw, 3rem);
 
   /* 사용자의 화면에 따라 달라질 배경색 */
   @media (min-width: 600px) {
     background: pink;
-    font-size: 1.5rem;
   }
   @media (min-width: 1000px) {
     background: wheat;
-    font-size: 2rem;
   }
 
   /* 가로 보기모드에서 적용될 테두리색 */
