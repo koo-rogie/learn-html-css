@@ -1,1 +1,49 @@
+@import url(/src/ui/components/avatar/avatar.css);
+
 /* 아바타 리스트 */
+/* .case-01 inline-block */
+h2{
+    text-align: center;
+}
+.case-01{
+    background-color: yellow;
+    margin: 20px auto;
+    border: 2px solid red;
+    border-radius: 4px;
+    ul{
+        width: 360px;
+        background-color: pink;
+        font-size: 0;
+        padding: 10px;
+        margin: 0 auto;
+        li{
+            display: inline-block;
+            background-color: lime;
+            font-size: 1rem;
+            margin: 10px;
+        }
+    }
+}
+
+/* .case-02 float */
+.case-02{
+    background-color: yellow;
+    margin: 20px auto;
+    border: 2px solid red;
+    border-radius: 4px;
+    ul{
+        width: 360px;
+        background-color: pink;
+        padding: 10px;
+        margin: 0 auto;
+        display: flow-root;
+        li{
+            float: left;
+            background-color: lime;
+            margin: 10px;
+            
+        }
+    }
+}
+
+/* .case-03 flex */
