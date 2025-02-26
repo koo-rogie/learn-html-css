@@ -1,0 +1,72 @@
+@import '/src/common/modern-reset.css';
+@import '/src/common/ally.css';
+/* 아바타 컴포넌트 */
+:root {
+  --size: 4rem;
+  --radius: 50%;
+  --state-offline: #dbdbdb;
+  --state-online: #4cfe88;
+}
+.interaction-none-components{
+    display: flow-root;
+}
+/* 인터렉션이 없는 컴포넌트 */
+.img-avatar {
+  width: var(--size);
+  position: relative;
+  float: left;
+  img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: var(--radius);
+  }
+  .avatar-state {
+    position: absolute;
+    width: 25%;
+    aspect-ratio: 1/1;
+    border-radius: var(--radius);
+    right: 0;
+    bottom: 0;
+    border: 2px solid #fff;
+
+    &.offline {
+      background-color: var(--state-offline);
+    }
+    &.online {
+      background-color: var(--state-online);
+    }
+  }
+}
+
+/* 인터렉션이 있는 컴포넌트 */
+.button-avatar {
+  position: relative;
+  width: var(--size);
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: var(--radius);
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 25%;
+    aspect-ratio: 1/1;
+    border-radius: var(--radius);
+    right: 0;
+    bottom: 0;
+    background-color: var(--state-offline);
+    border: 2px solid #fff;
+  }
+
+  &.is-active::after{
+    background-color: var(--state-online);
+  }
+}
