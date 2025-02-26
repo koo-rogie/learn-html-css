@@ -2,7 +2,7 @@
 @import '/src/common/theme.css';
 
 :root {
-  --width: 50%;
+  --width-50: 50%;
 }
 /* 반응형 레이아웃 */
 /* header */
@@ -10,15 +10,25 @@
   background: var(--pastel-pink);
   height: 15vh;
 }
+/* 내비, 메인, 사이드바 컨테이너 */
+.nav-main-aside-wraper {
+  @media (min-width: 64rem) {
+    display: flow-root;
+  }
+}
 /* <nav> */
 .navigation {
   background: var(--pastel-green);
   height: 20vh;
+  @media (min-width: 64rem) {
+    width: 30%;
+    height: 70vh;
+    float: left;
+  }
 }
 
 /* 메인 콘텐츠 및 사이드바 컨테이너 */
 .conatent-wraper {
-  border: 1px solid black;
   @media (min-width: 48rem) {
     display: flow-root;
   }
@@ -29,9 +39,12 @@
   height: 30vh;
   @media (min-width: 48rem) {
     /* 768px */
-    width: var(--width);
+    width: var(--width-50);
     height: 50vh;
     float: left;
+  }
+  @media (min-width: 64rem) {
+    height: 70vh;
   }
 }
 /* <aside> */
@@ -40,9 +53,12 @@
   height: 20vh;
   @media (min-width: 48rem) {
     /* 768px */
-    width: var(--width);
+    width: var(--width-50);
     height: 50vh;
     float: left;
+  }
+  @media (min-width: 64rem) {
+    height: 70vh;
   }
 }
 
