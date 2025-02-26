@@ -1,0 +1,56 @@
+@import '/src/common/best-reset.css';
+@import '/src/common/theme.css';
+
+:root {
+  --width: 50%;
+}
+/* 반응형 레이아웃 */
+/* header */
+.header {
+  background: var(--pastel-pink);
+  height: 15vh;
+}
+/* <nav> */
+.navigation {
+  background: var(--pastel-green);
+  height: 20vh;
+}
+
+/* 메인 콘텐츠 및 사이드바 컨테이너 */
+.conatent-wraper {
+  border: 1px solid black;
+  @media (min-width: 48rem) {
+    display: flow-root;
+  }
+}
+/* <main> */
+.content {
+  background: var(--pastel-coral);
+  height: 30vh;
+  @media (min-width: 48rem) {
+    /* 768px */
+    width: var(--width);
+    height: 50vh;
+    float: left;
+  }
+}
+/* <aside> */
+.sidebar {
+  background: var(--pastel-yellow);
+  height: 20vh;
+  @media (min-width: 48rem) {
+    /* 768px */
+    width: var(--width);
+    height: 50vh;
+    float: left;
+  }
+}
+
+/* <footer> */
+.footer {
+  background: var(--pastel-gray);
+  height: 15vh;
+}
+
+/* 768 */
+/* 1024 */
