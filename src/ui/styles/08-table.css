@@ -2,3 +2,65 @@
 @import '/src/common/theme.css';
 
 /* 테이블 스타일링 */
+
+.table-wrapper {
+  margin-inline: 20px;
+  margin-block: 100px;
+  block-size: 500px;
+  overflow: auto;
+}
+.table-styling {
+  border: 1px solid currentColor;
+  inline-size: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  position: relative;
+  caption {
+    font-size: 2rem;
+    line-height: 1.5;
+    position: fixed;
+    right: 10px;
+    top: 20px;
+  }
+  .number {
+    inline-size: 10%;
+  }
+  .name {
+    inline-size: 20%;
+  }
+
+  .email {
+    inline-size: 40%;
+  }
+  .phone {
+    inline-size: 30%;
+  }
+  td {
+    text-align: center;
+  }
+
+  td,
+  th {
+    padding: 10px;
+    border: 1px solid currentColor;
+  }
+
+  thead tr {
+    position: sticky;
+    top: 0;
+  }
+
+  thead th,
+  tfoot tr {
+    background: rgb(23, 22, 62);
+    color: #fff;
+  }
+
+  tbody tr:nth-child(even) {
+    background-color: var(--pastel-gray);
+  }
+
+  thead th {
+    border-color: #fff;
+  }
+}
