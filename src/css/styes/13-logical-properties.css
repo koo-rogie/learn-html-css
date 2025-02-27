@@ -1,0 +1,11 @@
+.case-01{
+    writing-mode: vertical-rl;
+    border: 1px solid currentColor;
+    color: green;
+    /* width: 200px; */
+    inline-size: 400px;
+    block-size: 300px;
+    overflow: auto;
+    padding-inline-start: 20px;
+    padding-inline-end: 50px;
+}

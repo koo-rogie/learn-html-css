@@ -1,0 +1,42 @@
+@import '/src/common/theme.css';
+body *,
+body *::after,
+body *::before {
+  box-sizing: border-box;
+}
+/* flex 파해치기 */
+
+.case-01 {
+  display: flex;
+  /* flex-direction: row;
+  flex-wrap: nowrap; */
+  /* flex-flow: (flex-direction) (flex-wrap) 숏핸드 기법  */
+  border: 1px solid red;
+  padding: 10px;
+  inline-size: 622px;
+  block-size: 522px;
+  flex-flow: row nowrap;
+    justify-content: end;
+
+
+
+
+
+  [class*='item'] {
+    margin-block: 10px;
+    border: 1px solid currentColor;
+    background: var(--pastel-yellow);
+    inline-size: 100px;
+    block-size: 100px;
+    text-align: center;
+    align-content: center;
+    /* 기존에 세로 기준 가운데 정렬을 지원하지 않을 때 사용하던 트릭 */
+    /* line-height: 100px; */
+  }
+  .item1 {
+    inline-size: 200px;
+  }
+  .item2 {
+    /* inline-size: 300px; */
+  }
+}
