@@ -16,11 +16,7 @@ body *::before {
   inline-size: 622px;
   block-size: 522px;
   flex-flow: row nowrap;
-    justify-content: end;
-
-
-
-
+  justify-content: end;
 
   [class*='item'] {
     margin-block: 10px;
@@ -40,3 +36,29 @@ body *::before {
     /* inline-size: 300px; */
   }
 }
+
+.case-02 {
+    border: 1px solid green;
+    width: 502px;
+    inline-size: 502px;
+    display: flex;
+    flex-flow: row nowrap;
+  
+    [class^='item'] {
+      border: 1px solid currentColor;
+      /* width: 100px;
+      inline-size: 100px;
+      height: 100px;
+      block-size: 100px; */
+      text-align: center;
+      align-content: center;
+      flex-basis: auto;
+      flex-grow: 1;
+      /* width: 200px;
+      inline-size: 300px; */
+  
+      &:nth-child(even) {
+        order: -1;
+      }
+    }
+  }

@@ -1,0 +1,127 @@
+@import '/src/common/modern-reset.css';
+@import '/src/common/theme.css';
+
+/* 플랙스를 활용한 반응형 레이아웃 */
+
+.header {
+  background-color: var(--pastel-blue);
+  height: 10vh;
+}
+.navigation {
+  background-color: var(--pastel-coral);
+  height: 20vh;
+}
+
+.main-sidabar {
+  @media (min-width: 768px) {
+    display: flex;
+  }
+  @media (min-width: 1208px) {
+  }
+}
+.content {
+  background-color: var(--pastel-mint);
+  height: 40vh;
+  @media (min-width: 768px) {
+    height: 60vh;
+    width: 50%;
+  }
+}
+.sidebar {
+  background-color: var(--pastel-yellow);
+  height: 20vh;
+  @media (min-width: 768px) {
+    height: 60vh;
+    width: 50%;
+  }
+}
+.footer {
+  background-color: var(--pastel-gray);
+  height: 10vh;
+}
+
+/* 마크업 수정없이 하는 방법 */
+
+/* .no-html {
+  @media (min-width: 768px) {
+    display: flex;
+    flex-flow: row wrap;
+    > * {
+      inline-size: 100%;
+    }
+
+    .header,
+    .navigation,
+    .footer {
+      width: 100%;
+      inline-size: 100%;
+    }
+
+    .content,
+    .sidebar {
+      width: 50%;
+      inline-size: 50%;
+      height: 65vh;
+      block-size: 65vh;
+    }
+  }
+
+  .header {
+    background: var(--pastel-coral);
+    height: 10vh;
+  }
+
+  .navigation {
+    background: var(--pastel-green);
+    height: 15vh;
+  }
+
+  메인 콘텐츠
+  .content {
+    background: var(--pastel-aqua);
+    height: 40vh;
+  }
+
+  .sidebar {
+    background: var(--pastel-yellow);
+    height: 25vh;
+  }
+
+  .footer {
+    background: var(--pastel-lavender);
+    height: 10vh;
+  }
+} */
+
+/* 플렉스 컨테이너-선생님이 하신거 */
+.no-html {
+  @media (min-width: 768px) {
+    display: flex;
+    flex-flow: row wrap;
+
+    .header,
+    .navigation,
+    .footer {
+      width: 100%;
+      inline-size: 100%;
+    }
+
+    .content,
+    .sidebar {
+      width: 50%;
+      inline-size: 50%;
+      height: 65vh;
+      block-size: 65vh;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .navigation,
+    .sidebar {
+      width: 25%;
+      inline-size: 25%;
+      height: 65vh;
+      block-size: 65vh;
+    }
+  }
+}
