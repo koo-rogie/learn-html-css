@@ -1,0 +1,21 @@
+@import '/src/common/login-theme.css';
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+*:focus {
+  outline: 0;
+}
+*:focus-visible {
+  box-shadow: 0 0 0 1px var(--green-700);
+  border-radius: var(--rounded-xs);
+}

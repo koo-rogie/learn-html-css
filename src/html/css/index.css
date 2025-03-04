@@ -1,51 +1,82 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: content-box;
-}
-body {
-  > div {
-    max-width: 800px;
-    min-width: 300px;
-    margin: 10px auto;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 20px;
-    padding: 20px;
-  }
+  box-sizing: border-box;
 }
 
-.list {
-  display: none;
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
 }
-.open{
-  display: block;
+
+body > div {
+  max-width: 800px;
+  min-width: 300px;
+  margin: 10px auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  padding: 20px;
+  background-color: white;
 }
-h1 {
+
+/* 버튼 스타일 (웹 접근성 반영) */
+.toggle-btn {
+  width: 100%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
   text-align: center;
-  font-size: 3em;
-  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-h2 {
+
+.toggle-btn h2 {
   text-align: center;
   font-size: 2.5em;
   text-transform: uppercase;
   margin-bottom: 16px;
+  cursor: pointer;
+  transition: color 0.3s ease;
 }
+
+.toggle-btn:hover h2 {
+  color: #007bff;
+}
+
+/* 리스트 기본적으로 숨김 */
+.list {
+  display: none;
+  padding: 10px;
+  border-top: 1px solid #ddd;
+}
+
+/* 활성화된 리스트 */
+.open {
+  display: block;
+}
+
+/* 리스트 스타일 */
 ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   gap: 16px;
+  padding: 0;
 }
+
 li {
   width: 40%;
   list-style: none;
   padding-left: 20px;
   position: relative;
   border-bottom: 1px solid black;
+  padding-bottom: 10px;
 }
 
+/* 리스트 아이콘 (● 모양) */
 li::after {
   content: '';
   display: block;
@@ -56,9 +87,10 @@ li::after {
   background-color: red;
   width: 10px;
   height: 10px;
-  border-radius: 20px;
+  border-radius: 50%;
 }
 
+/* 링크 스타일 */
 a {
   display: inline-block;
   line-height: 2;
@@ -69,4 +101,11 @@ a {
 
 a:hover {
   background-color: pink;
+}
+
+/* 반응형 스타일 */
+@media (max-width: 600px) {
+  li {
+    width: 80%;
+  }
 }

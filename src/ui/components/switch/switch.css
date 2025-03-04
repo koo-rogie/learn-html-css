@@ -1,0 +1,121 @@
+@import '/src/common/modern-reset.css';
+@import '/src/common/login-theme.css';
+@import '/src/common/a11y.css';
+@import '/src/common/base.css';
+
+/* 가상 요소 선택자를 활용한 텍스트 스위치 컴포넌트 */
+.text-switch {
+  --switch-active-color: var(--green-500, #03cf5d);
+  --switch-inactive-color: var(--gray-600, #999);
+  --size: 2em;
+
+  position: relative;
+  display: inline-flex;
+  justify-content: end;
+  width: var(--size);
+  inline-size: var(--size);
+  background: yellow;
+
+  input {
+    position: absolute;
+    top: 0;
+    inset-block-start: 0;
+    left: 0;
+    inset-inline-start: 0;
+    margin: 0;
+    inline-size: 100%;
+    block-size: 100%;
+    appearance: none;
+  }
+
+  label {
+    display: contents;
+    width: var(--size);
+    inline-size: var(--size);
+    color: var(--switch-inactive-color);
+
+    &::after {
+      content: 'OFF';
+      font-size: var(--font-md);
+    }
+  }
+
+  input:checked + label::after {
+    content: 'ON';
+    color: var(--switch-active-color);
+  }
+}
+
+/* 슬라이드 버튼 유형의 스위치 컴포넌트 */
+.toggle-switch {
+  --size: 4rem;
+
+  display: inline-flex;
+  width: var(--size);
+  inline-size: var(--size);
+  aspect-ratio: 2/1;
+  border: 1px solid var(--gray-700);
+  border-radius: calc(var(--size) / 2);
+  background: var(--gray-400);
+  position: relative;
+  transition: background 0.3s;
+
+  &:has(:checked) {
+    background: var(--green-500);
+  }
+
+  &:has(:focus-visible) {
+    box-shadow: 0 0 0 1px var(--blue-900);
+  }
+
+  /* input {
+    margin: 0;
+    appearance: none;
+    position: absolute;
+    top: 0px;
+    inset-block-start: 0px;
+    left: 0px;
+    inset-inline-start: 0px;
+    transition: translate 0.3s;
+    width: calc(50% - 1px);
+    inline-size: calc(50% - 1px);
+    aspect-ratio: 1 / 1;
+    background: var(--white);
+    border-radius: 50%;
+
+    &:checked {
+      translate: calc(100% + 2px) 0;
+    }
+  } */
+
+  /* label {
+    width: 100%;
+    inline-size: 100%;
+    height: 100%;
+    block-size: 100%;
+  } */
+  input {
+    margin: 0;
+    width: calc(50% - 1px);
+    aspect-ratio: 1 / 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  label {
+    width: calc(50% - 1px);
+    aspect-ratio: 1 / 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: red;
+    border-radius: 50%;
+    transition: transition 0.3s;
+    appearance: none;
+  }
+
+  input:checked + label {
+    translate: calc(100% + 2px) 0;
+  }
+}

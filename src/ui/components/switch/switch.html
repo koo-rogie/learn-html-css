@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>스위치 컴포턴트</title>
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css"
+    />
+    <link
+      rel="shortcut icon"
+      href="/src/assets/favicon/likelion.ico"
+      type="image/x-icon"
+    />
+    <link rel="icon" href="/src/assets/favicon/likelion.svg" />
+    <link rel="stylesheet" href="/src/ui/components/switch/switch.css" />
+  </head>
+  <body>
+    <div class="components-container">
+      <h1>스위치 컴포넌트</h1>
+
+      <!-- on off 스위치를 텍스트로 할 수있음 -->
+      <h2>텍스트 스위치</h2>
+      <div class="switch text-switch">
+        <input
+          class="switch__input"
+          role="switch"
+          type="checkbox"
+          name="switch-1"
+          id="switch-1"
+        />
+        <label class="switch__label" for="switch-1">
+          <span class="sr-only">스위치</span>
+        </label>
+      </div>
+
+      <!-- 옆으로 스위칭 할 수 있는 버튼으로 나옴 -->
+      <h2>토글 스위치</h2>
+      <div class="switch toggle-switch">
+        <input
+          class="switch__input"
+          role="switch"
+          type="checkbox"
+          name="switch-2"
+          id="switch-2"
+        />
+        <label class="switch__label" for="switch-2">
+          <span class="sr-only">스위치</span>
+        </label>
+      </div>
+    </div>
+  </body>
+</html>
