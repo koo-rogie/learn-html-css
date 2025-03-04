@@ -1,0 +1,63 @@
+@import '/src/common/modern-reset.css';
+@import '/src/common/login-theme.css';
+@import '/src/common/a11y.css';
+@import '/src/common/base.css';
+
+/* Default 스타일 */
+.button {
+  --spacing: var(--spacing-2, 0.5rem);
+  --text-size: var(--font-base, 1rem);
+  --text-color: var(--white, #fff);
+  --fill-color: var(--gray-900, #454545);
+
+  display: inline-flex;
+  border: 1px solid currentColor;
+  padding: var(--spacing);
+  color: var(--text-color);
+  background: var(--fill-color);
+
+  /* 비활성화 스타일 */
+  &:disabled {
+    --disabled-color: var(--gray-300, #dadada);
+    --text-color: var(--white, #fff);
+
+    background: var(--disabled-color);
+    color: var(--text-color);
+    border-color: var(--disabled-color);
+    cursor: not-allowed;
+    opacity: 0.7;
+  }
+
+  &:focus {
+    --outline-color: var(--blue-900);
+
+    outline: 0;
+    border-color: var(--outline-color);
+  }
+}
+
+/* Fill 스타일 */
+.button--fill {
+  --fill-color: var(--green-500, #03cf5d);
+  --text-color: var(--white, #fff);
+
+  color: var(--text-color);
+  border-color: var(--fill-color);
+  background: var(--fill-color);
+}
+
+/* Outline 스타일 */
+.button--outline {
+  --outline-color: var(--green-500, #03cf5d);
+
+  border: 1px solid currentColor;
+  color: var(--outline-color);
+  background: transparent;
+
+  &:disabled {
+    --disabled-color: var(--gray-300, #dadada);
+
+    background: transparent;
+    color: var(--disabled-color);
+  }
+}

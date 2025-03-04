@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>텍스트 링크 컴포넌트</title>
+    <title>입력 서식 컴포넌트</title>
     <link
       rel="stylesheet"
       as="style"
@@ -16,16 +16,196 @@
       type="image/x-icon"
     />
     <link rel="icon" href="/src/assets/favicon/likelion.svg" />
-    <link rel="stylesheet" href="/src/ui/components/text-link/text-link.css" />
+    <link rel="stylesheet" href="/src/ui/components/input/input.css" />
   </head>
   <body>
-    <h1>텍스트 링크 컴포넌트</h1>
-    <!-- 일반 텍스트 링크 -->
-    <a href="/" class="text-link"> 링크 텍스트 </a>
+    <div class="component-container">
+      <form action="https://formspree.io/f/xovjgzjg" method="post">
+        <fieldset>
+          <legend>입력 서식</legend>
+          <!-- 입력 서식 컴포넌트 (input) : 레이블 유형 -->
+          <div class="input show-label">
+            <label class="input__label" for="input-1">레이블</label>
+            <input
+              class="input__input"
+              type="email"
+              id="input-1"
+              required
+              placeholder="플레이스 홀더 텍스트"
+              aria-errormessage="error-message-1"
+            />
+            <p
+              class="input__error-message"
+              id="error-message-1"
+              aria-live="polite"
+            >
+              <span>에러 메시지를 입력해 주세요.</span>
+            </p>
+          </div>
+          <div class="input show-label">
+            <label class="input__label" for="input-2">레이블</label>
+            <input
+              class="input__input"
+              readonly
+              value="읽기 전용"
+              type="email"
+              id="input-2"
+              required
+              placeholder="플레이스 홀더 텍스트"
+              aria-errormessage="error-message-2"
+            />
+            <p
+              class="input__error-message"
+              id="error-message-2"
+              aria-live="polite"
+            >
+              <span>에러 메시지를 입력해 주세요.</span>
+            </p>
+          </div>
+          <div class="input show-label">
+            <label class="input__label" for="input-3">레이블</label>
+            <input
+              class="input__input"
+              disabled
+              value="비 활성화"
+              type="email"
+              id="input-3"
+              required
+              placeholder="플레이스 홀더 텍스트"
+              aria-errormessage="error-message-3"
+            />
+            <p
+              class="input__error-message"
+              id="error-message-3"
+              aria-live="polite"
+            >
+              <span>에러 메시지를 입력해 주세요.</span>
+            </p>
+          </div>
 
-    <!-- 새창 텍스트 링크 -->
-    <a href="/" class="text-link" target="_blank" rel="noopenner noreferrer">
-      링크 텍스트
-    </a>
+          <hr />
+
+          <!-- 입력 서식 컴포넌트 (input) : 숨김 레이블 유형 -->
+          <div class="input">
+            <label class="input__label sr-only" for="input-4">레이블</label>
+            <input
+              class="input__input"
+              type="email"
+              id="input-4"
+              required
+              placeholder="플레이스 홀더 텍스트"
+              aria-errormessage="error-message-4"
+            />
+            <p
+              class="input__error-message"
+              id="error-message-4"
+              aria-live="polite"
+            >
+              <span>에러 메시지를 입력해 주세요.</span>
+            </p>
+          </div>
+          <div class="input">
+            <label class="input__label sr-only" for="input-5">레이블</label>
+            <input
+              class="input__input"
+              readonly
+              value="읽기 전용"
+              type="email"
+              id="input-5"
+              required
+              placeholder="플레이스 홀더 텍스트"
+              aria-errormessage="error-message-5"
+            />
+            <p
+              class="input__error-message"
+              id="error-message-5"
+              aria-live="polite"
+            >
+              <span>에러 메시지를 입력해 주세요.</span>
+            </p>
+          </div>
+          <div class="input">
+            <label class="input__label sr-only" for="input-6">레이블</label>
+            <input
+              class="input__input"
+              disabled
+              value="비 활성화"
+              type="email"
+              id="input-6"
+              required
+              placeholder="플레이스 홀더 텍스트"
+              aria-errormessage="error-message-6"
+            />
+            <p
+              class="input__error-message"
+              id="error-message-6"
+              aria-live="polite"
+            >
+              <span>에러 메시지를 입력해 주세요.</span>
+            </p>
+          </div>
+          <hr />
+          <!-- 입력 서식 컴포넌트 (input) : 플로팅 레이블 유형  -->
+          <div class="input floating-label">
+            <label class="input__label" for="input-7">레이블</label>
+            <input
+              class="input__input"
+              type="email"
+              id="input-7"
+              placeholder="플레이스 홀더 텍스트"
+              required
+              aria-errormessage="error-message-7"
+            />
+            <p
+              class="input__error-message"
+              id="error-message-7"
+              aria-live="polite"
+            >
+              <span>에러 메시지를 입력해 주세요.</span>
+            </p>
+          </div>
+          <div class="input floating-label">
+            <label class="input__label" for="input-8">레이블</label>
+            <input
+              class="input__input"
+              readonly
+              value="읽기 전용"
+              type="email"
+              id="input-8"
+              placeholder="플레이스 홀더 텍스트"
+              aria-errormessage="error-message-8"
+            />
+            <p
+              class="input__error-message"
+              id="error-message-8"
+              aria-live="polite"
+            >
+              <span>에러 메시지를 입력해 주세요.</span>
+            </p>
+          </div>
+          <div class="input floating-label">
+            <label class="input__label" for="input-9">레이블</label>
+            <input
+              class="input__input"
+              disabled
+              value="비 활성화"
+              type="email"
+              id="input-9"
+              required
+              placeholder="플레이스 홀더 텍스트"
+              aria-errormessage="error-message-9"
+            />
+            <p
+              class="input__error-message"
+              id="error-message-9"
+              aria-live="polite"
+            >
+              <span>에러 메시지를 입력해 주세요.</span>
+            </p>
+          </div>
+          <button type="submit">확인</button>
+        </fieldset>
+      </form>
+    </div>
   </body>
 </html>
