@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>검색 바 스타일링</title>
+    <link
+      rel="shortcut icon"
+      href="/src/assets/favicon/likelion.ico"
+      type="image/x-icon"
+    />
+    <link rel="icon" href="/src/assets/favicon/likelion.svg" />
+    <link
+      rel="preload"
+      as="font"
+      href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/static/woff2/SUIT-Regular.woff2"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/static/woff2/SUIT.css"
+    />
+    <link rel="stylesheet" href="/src/ui/styles/10-searchbar.css" />
+  </head>
+  <body>
+    <h1>검색 바(searchbar)</h1>
+    <!-- 로고 컴포넌트 -->
+    <div class="brand">
+      <a href="/" class="logo">
+        <svg
+          aria-label="네이버"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M0 0H8L15.5 12V0H24V24H15.1875L8 12.5L8 24H0V0Z"
+            fill="url(#paint0_linear_4260_3)"
+          />
+          <defs>
+            <linearGradient
+              id="paint0_linear_4260_3"
+              x1="4.5"
+              y1="-1.93715e-07"
+              x2="20.5"
+              y2="24"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stop-color="#1BF008" />
+              <stop offset="1" stop-color="#03CCA8" />
+            </linearGradient>
+          </defs>
+        </svg>
+      </a>
+    </div>
+
+    <!-- 검색 버튼 컴포넌트 -->
+    <button type="submit" class="button-search button-circle">
+      <span class="sr-only">검색</span>
+    </button>
+
+    <!-- 검색 폼 -->
+    <div class="input">
+      <label for="keyword" class="sr-only">검색어</label>
+      <input
+        type="search"
+        id="keyword"
+        name="keyword"
+        required
+        placeholder="검색어를 입력해주세요."
+      />
+    </div>
+
+    <!-- 검색 폼 -->
+    <form action="/" class="form-search">
+      <fieldset>
+        <legend class="sr-only">검색 폼</legend>
+        <div class="search-wrapper">
+          <div class="input">
+            <label for="keyword" class="sr-only">검색어</label>
+            <input
+              type="search"
+              id="keyword"
+              name="keyword"
+              required
+              placeholder="검색어를 입력해주세요."
+            />
+          </div>
+          <button type="submit" class="button-search button-circle">
+            <span class="sr-only">검색</span>
+          </button>
+        </div>
+      </fieldset>
+    </form>
+
+    <!-- 검색 바 -->
+    <div class="searchbar">
+      <div class="brand">
+        <a href="/" class="logo">
+          <svg
+            aria-label="네이버"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M0 0H8L15.5 12V0H24V24H15.1875L8 12.5L8 24H0V0Z"
+              fill="url(#paint0_linear_4260_3)"
+            />
+            <defs>
+              <linearGradient
+                id="paint0_linear_4260_3"
+                x1="4.5"
+                y1="-1.93715e-07"
+                x2="20.5"
+                y2="24"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stop-color="#1BF008" />
+                <stop offset="1" stop-color="#03CCA8" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </a>
+      </div>
+      <form action="/" class="form-search">
+        <fieldset>
+          <legend class="sr-only">검색 폼</legend>
+          <div class="search-wrapper">
+            <div class="input">
+              <label for="keyword" class="sr-only">검색어</label>
+              <input
+                type="search"
+                id="keyword"
+                name="keyword"
+                required
+                placeholder="검색어를 입력해주세요."
+              />
+            </div>
+            <button type="submit" class="button-search button-circle">
+              <span class="sr-only">검색</span>
+            </button>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  </body>
+</html>

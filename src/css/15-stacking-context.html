@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stacking Context</title>
+    <link
+      rel="shortcut icon"
+      href="/src/assets/favicon/likelion.ico"
+      type="image/x-icon"
+    />
+    <link rel="icon" href="/src/assets/favicon/likelion.svg" />
+    <link
+      rel="preload"
+      as="font"
+      href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/static/woff2/SUIT-Regular.woff2"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/static/woff2/SUIT.css"
+    />
+    <link rel="stylesheet" href="/src/css/styes/15-stacking-context.css" />
+  </head>
+  <body>
+    <h1>Stacking context</h1>
+    <div class="case-01">
+      <button type="button" class="button-avatar" aria-label="오프라인">
+        <img src="/src/assets/face/face1.jpg" alt="문서인" />
+      </button>
+      <button type="button" class="button-avatar is-active" aria-label="온라인">
+        <img src="/src/assets/face/face2.jpg" alt="정유진" />
+      </button>
+      <button type="button" class="button-avatar" aria-label="오프라인">
+        <img src="/src/assets/face/face3.jpg" alt="김현지" />
+      </button>
+      <button type="button" class="button-avatar is-active" aria-label="온라인">
+        <img src="/src/assets/face/face4.jpg" alt="배샛별" />
+      </button>
+      <button type="button" class="button-avatar" aria-label="오프라인">
+        <img src="/src/assets/face/face5.jpg" alt="김연호" />
+      </button>
+      <button type="button" class="button-avatar is-active" aria-label="온라인">
+        <img src="/src/assets/face/face6.jpg" alt="박정우" />
+      </button>
+      <button type="button" class="button-avatar" aria-label="오프라인">
+        <img src="/src/assets/face/face7.jpg" alt="신동수" />
+      </button>
+      <button type="button" class="button-avatar is-active" aria-label="온라인">
+        <img src="/src/assets/face/face8.jpg" alt="우영찬" />
+      </button>
+    </div>
+
+    <div class="case-02">
+      <div class="area1">영역1</div>
+      <div class="area2">영역2</div>
+      <div class="area3">영역3</div>
+      <div class="area4">영역4</div>
+    </div>
+  </body>
+</html>

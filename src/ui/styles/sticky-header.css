@@ -1,0 +1,52 @@
+@import '/src/common/modern-reset.css';
+@import '/src/common/theme.css';
+
+body {
+  margin-block-end: 1200px;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  position: sticky;
+  top: 0;
+  padding: 1rem;
+  background: #fff;
+}
+
+.container {
+  inline-size: clamp(20rem, 50%, 40rem);
+  margin: 0 auto;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 2rem;
+
+  .team {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    top: 80px;
+    position: sticky;
+    top: 80px;
+  }
+
+  .team-header {
+    display: block;
+    padding: 1rem;
+    background-color: var(--pastel-dark-blue);
+    color: #fff;
+    font-weight: 600;
+    font-size: 18px;
+    z-index: 100;
+  }
+
+  li {
+    padding: 1rem;
+    border-bottom: 1px solid var(--pastel-gray);
+  }
+
+  li:last-child {
+    border-bottom: none;
+  }
+}
