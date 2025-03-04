@@ -1,0 +1,20 @@
+@import '/src/common/modern-reset.css';
+@import '/src/common/login-theme.css';
+@import '/src/common/a11y.css';
+@import '/src/common/base.css';
+
+.text-link {
+  /* background-color: yellow; */
+  display: inline-flex;
+  font-size: var(--font-md);
+
+  &:hover {
+    background: var(--blue-100);
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 1px var(--blue-900);
+    border-radius: var(--rounded-xs);
+    outline: 0;
+  }
+}

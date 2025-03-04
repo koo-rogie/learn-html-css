@@ -1,0 +1,79 @@
+:root {
+  /* White & Black 색상 */
+  --white: #fff;
+  --black: #121212;
+
+  /* Gray 색상 */
+  --gray-100: #f8f8f8; /* 가장 밝은 회색 */
+  --gray-200: #f0f0f0;
+  --gray-300: #dadada; /* 기준 색상 */
+  --gray-400: #c2c2c2;
+  --gray-500: #ababab;
+  --gray-600: #919191; /* 중간 회색 */
+  --gray-700: #787878;
+  --gray-800: #5e5e5e;
+  --gray-900: #454545;
+
+  /* Green 색상 */
+  --green-100: #e0f9ed; /* 가장 밝은 초록색 */
+  --green-200: #b8f2d8;
+  --green-300: #7febc0;
+  --green-400: #40e090;
+  --green-500: #03cf5d; /* 기준 색상 */
+  --green-600: #02b050;
+  --green-700: #029144;
+  --green-800: #017237;
+  --green-900: #01532a; /* 가장 어두운 초록색 */
+
+  /* Blue 색상 */
+  --blue-100: #e9f0fd; /* 가장 밝은 파란색 (기준점) */
+  --blue-200: #c7d7f9;
+  --blue-300: #a5bef5;
+  --blue-400: #83a5f0;
+  --blue-500: #618cec;
+  --blue-600: #4673d8;
+  --blue-700: #375bc4;
+  --blue-800: #2c49a8;
+  --blue-900: #24388d; /* 가장 어두운 파란색 (기준점) */
+
+  /* Red 색상 */
+  --red-100: #ffe5e5; /* 가장 밝은 빨간색 */
+  --red-200: #ffcccc;
+  --red-300: #ffa3a3;
+  --red-400: #ff5c5c;
+  --red-500: #ff1414; /* 기준 색상 */
+  --red-600: #e60000;
+  --red-700: #c20000;
+  --red-800: #990000;
+  --red-900: #660000; /* 가장 어두운 빨간색 */
+
+  /* 여백(Spacing)*/
+  --spacing-1: 0.25rem;
+  --spacing-2: 0.5rem;
+  --spacing-3: 0.75rem;
+  --spacing-4: 1rem;
+  --spacing-5: 1.25rem;
+  --spacing-6: 1.5rem;
+  --spacing-7: 1.75rem;
+  --spacing-8: 2rem;
+  --spacing-9: 2.25rem;
+  --spacing-10: 2.5rem;
+  --spacing-11: 2.75rem;
+  --spacing-12: 3rem;
+
+  /* 글자 크기(FontSize) */
+  --font-xs: 0.5rem;
+  --font-sm: 0.75rem;
+  --font-md: 0.875rem;
+  --font-base: 1rem;
+  --font-lg: 1.125rem;
+  --font-xl: 1.25rem;
+  --font-2xl: 1.5rem;
+
+  /* 둥근모서리(Rounded) */
+  --rounded-xs: 0.125rem;
+  --rounded-sm: 0.25rem;
+  --rounded-md: 0.5rem;
+  --rounded-base: 1rem;
+  --rounded-circle: 50%;
+}
