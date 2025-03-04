@@ -16,6 +16,6 @@ a {
 .component-container {
   display: flex;
   flex-flow: column nowrap;
-  flex-grow: 1rem;
+  row-gap: 1rem;
   padding: 1rem;
 }

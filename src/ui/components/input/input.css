@@ -2,3 +2,27 @@
 @import '/src/common/login-theme.css';
 @import '/src/common/a11y.css';
 @import '/src/common/base.css';
+
+form {
+  display: contents;
+  fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+    display: contents;
+  }
+}
+
+.input {
+  background-color: var(--blue-800);
+  position: relative;
+
+  p {
+    font-size: var(--font-xs);
+    color: var(--red-500);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    translate: 0 160%;
+  }
+}
