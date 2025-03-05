@@ -5,25 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>입력 서식 컴포넌트</title>
     <link
-      rel="stylesheet"
-      as="style"
-      crossorigin
-      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css"
-    />
-    <link
       rel="shortcut icon"
       href="/src/assets/favicon/likelion.ico"
       type="image/x-icon"
     />
     <link rel="icon" href="/src/assets/favicon/likelion.svg" />
+    <link
+      rel="preload"
+      as="font"
+      href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/static/woff2/SUIT-Regular.woff2"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/static/woff2/SUIT.css"
+    />
     <link rel="stylesheet" href="/src/ui/components/input/input.css" />
   </head>
   <body>
     <div class="component-container">
       <h1>입력 서식 컴포넌트</h1>
-      <form action="https://formspree.io/f/xovjgzjg" method="post">
+      <form action="/" method="post">
         <fieldset>
-          <legend>입력 서식</legend>
+          <legend class="sr-only">입력 서식</legend>
+          <div class="input show-label">
+            <label class="input__label" for="input-0">비밀번호</label>
+            <input
+              class="input__input"
+              type="password"
+              pattern="(?=.*[A-Za-z])(?=.*\d)(?=.*[\W_]).{8,}"
+              id="input-0"
+              name="input-0"
+              required
+              placeholder="영문 소문자, 숫자, 특수문자 포함 최소 8자리 이상"
+              aria-errormessage="error-message-0"
+            />
+            <p
+              class="input__error-message"
+              id="error-message-0"
+              aria-live="polite"
+            >
+              <span
+                >비밀번호는 영문 소문자, 숫자, 특수문자 포함 최소 8자리 이상
+                입력해야 합니다.</span
+              >
+            </p>
+          </div>
           <!-- 입력 서식 컴포넌트 (input) : 레이블 유형 -->
           <div class="input show-label">
             <label class="input__label" for="input-1">레이블</label>
@@ -31,7 +57,9 @@
               class="input__input"
               type="email"
               id="input-1"
+              name="input-1"
               required
+              pattern=".{6,10}"
               placeholder="플레이스 홀더 텍스트"
               aria-errormessage="error-message-1"
             />
@@ -51,6 +79,7 @@
               value="읽기 전용"
               type="email"
               id="input-2"
+              name="input-2"
               required
               placeholder="플레이스 홀더 텍스트"
               aria-errormessage="error-message-2"
@@ -71,6 +100,7 @@
               value="비 활성화"
               type="email"
               id="input-3"
+              name="input-3"
               required
               placeholder="플레이스 홀더 텍스트"
               aria-errormessage="error-message-3"
@@ -93,6 +123,7 @@
               class="input__input"
               type="email"
               id="input-4"
+              name="input-4"
               required
               placeholder="플레이스 홀더 텍스트"
               aria-errormessage="error-message-4"
@@ -113,6 +144,7 @@
               value="읽기 전용"
               type="email"
               id="input-5"
+              name="input-5"
               required
               placeholder="플레이스 홀더 텍스트"
               aria-errormessage="error-message-5"
@@ -133,6 +165,7 @@
               value="비 활성화"
               type="email"
               id="input-6"
+              name="input-6"
               required
               placeholder="플레이스 홀더 텍스트"
               aria-errormessage="error-message-6"
@@ -153,6 +186,7 @@
               class="input__input"
               type="email"
               id="input-7"
+              name="input-7"
               placeholder="플레이스 홀더 텍스트"
               required
               aria-errormessage="error-message-7"
@@ -173,6 +207,7 @@
               value="읽기 전용"
               type="email"
               id="input-8"
+              name="input-8"
               placeholder="플레이스 홀더 텍스트"
               aria-errormessage="error-message-8"
             />
@@ -192,6 +227,7 @@
               value="비 활성화"
               type="email"
               id="input-9"
+              name="input-9"
               required
               placeholder="플레이스 홀더 텍스트"
               aria-errormessage="error-message-9"
@@ -204,6 +240,7 @@
               <span>에러 메시지를 입력해 주세요.</span>
             </p>
           </div>
+
           <button type="submit">확인</button>
         </fieldset>
       </form>

@@ -13,16 +13,98 @@ form {
   }
 }
 
-.input {
+/* .input {
   background-color: var(--blue-800);
   position: relative;
 
   p {
+    display: none;
     font-size: var(--font-xs);
     color: var(--red-500);
     position: absolute;
     bottom: 0;
     left: 0;
     translate: 0 160%;
+  }
+  input:invalid + p {
+    display: block;
+  }  
+  input:placeholder-shown + p {
+    display: none !important;
+  }
+  input:user-invalid + p {
+    display: block;
+  }
+} */
+
+/* 입력 서식 컴포넌트 */
+.input {
+  --text-color: var(--gray-600);
+  --fill-color: var(--white);
+  --outline-color: var(--gray-900);
+  --height: 3rem;
+  --spacing: var(--spacing-3);
+  --text-size: var(--font-base);
+
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  row-gap: var(--spacing);
+  font-size: var(--text-size);
+  position: relative;
+
+  /* .input__label */
+  label {
+    color: var(--text-color);
+  }
+
+  /* .input__input */
+  input {
+    color: var(--text-color);
+    background: var(--fill-color);
+    border: 1px solid var(--outline-color);
+    height: var(--height);
+    padding: var(--spacing);
+    flex: 1 1 0;
+
+    /* 읽기 전용 */
+    &:read-only {
+      --text-color: var(--blue-300);
+
+      cursor: default;
+      pointer-events: none;
+    }
+
+    /* 비활성화 */
+    &:disabled {
+      --fill-color: var(--gray-200);
+
+      cursor: not-allowed;
+      opacity: 0.7;
+    }
+  }
+
+  /* .input__error-message */
+  p {
+    --text-color: var(--red-500);
+    --text-size: var(--font-xs);
+
+    display: none;
+    font-size: var(--text-size);
+    color: var(--text-color);
+    width: 100%;
+    inline-size: 100%;
+    position: absolute;
+    bottom: 0;
+    inset-block-end: 0;
+    translate: 0 0.75rem;
+  }
+
+  input:user-invalid + p {
+    display: block;
+  }
+
+  input:placeholder-shown + p {
+    display: none;
   }
 }

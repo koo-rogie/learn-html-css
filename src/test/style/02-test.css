@@ -1,12 +1,35 @@
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  /*border-width: 0; */
-  background-color: red;
+span {
+  background-color: pink;
 }
+
+.inline-flex{
+  display: inline-flex;
+  /* display: inline-block; */
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+  height: 100px;
+}
+
+
+.inline-block{
+  display: inline;
+}
+
+/* 
+.inline-flex {
+  display: inline-flex;
+  flex-flow: row nowrap;
+  > spna {
+    padding: 10px;
+    height: 100px;
+  }
+}
+.inline-block {
+  display: inline-block;
+}
+
+.inline,
+.block {
+  display: inline-flex;
+} */
