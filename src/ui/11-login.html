@@ -3,33 +3,169 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title></title>
-    <link
-      rel="stylesheet"
-      as="style"
-      crossorigin
-      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css"
-    />
+    <title>반응형 로그인(네이버)</title>
     <link
       rel="shortcut icon"
       href="/src/assets/favicon/likelion.ico"
       type="image/x-icon"
     />
     <link rel="icon" href="/src/assets/favicon/likelion.svg" />
+    <link
+      rel="preload"
+      as="font"
+      href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/static/woff2/SUIT-Regular.woff2"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/static/woff2/SUIT.css"
+    />
     <link rel="stylesheet" href="/src/ui/styles/11-login.css" />
   </head>
   <body>
-    <h2>컴포넌트(Components)</h2>
-    <ul>
-      <li><a href="/src/ui/components/avatar/avatar.html">아바타</a></li>
-      <li><a href="/src/ui/components/logo/logo.html">네이버 로고</a></li>
-      <li><a href="/src/ui/components/input/input.html">입력서식</a></li>
-      <li><a href="/src/ui/components/checkbox/checkbox.html">체크박스</a></li>
-      <li>
-        <a href="/src/ui/components/text-link/text-link.html">텍스트 링크</a>
-      </li>
-      <li><a href="/src/ui/components/switch/switch.html">스위치</a></li>
-      <li><a href="/src/ui/components/button/button.html">버튼</a></li>
-    </ul>
+    <div class="container">
+      <!-- 헤더 - 로고 -->
+      <header class="login-header">
+        <h1 class="sr-only">네이버 로그인</h1>
+        <a href=#void" class="logo">
+          <svg
+            aria-label="네이버"
+            width="230"
+            height="88"
+            viewBox="0 0 230 44"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M30.0764 23.5394L13.6301 0H0V43.9824H14.279V20.443L30.7252 43.9824H44.3554V0H30.0764V23.5394Z"
+              fill="#03CF5D"
+            />
+            <path
+              d="M66.2086 0L48.8973 43.9824H63.6132L65.701 38.1767H82.2929L84.3851 44H99.0967L81.7853 0.0175967L66.2086 0ZM69.0644 27.5946L73.9992 13.8545L78.9295 27.5946H69.0644Z"
+              fill="#03CF5D"
+            />
+            <path
+              d="M116.624 28.9184L106.234 0H91.5224L108.834 43.9824H124.41L141.722 0H127.006L116.624 28.9184Z"
+              fill="#03CF5D"
+            />
+            <path
+              d="M160.326 27.2735H180.449V16.7089H160.326V10.7801H180.666V0H146.264V43.9824H181.098V33.2023H160.326V27.2735Z"
+              fill="#03CF5D"
+            />
+            <path
+              d="M218.842 28.8921L220.166 28.3335C225.295 26.1959 227.903 21.5646 227.903 15.6885C227.903 10.1335 225.869 6.0124 221.861 3.47461C218.131 1.10396 213.298 0 206.642 0H188.024V43.9824H201.87V31.6937H206.849L215.284 43.9824H230L218.842 28.8921ZM209.228 20.4826H201.654V11.2111H209.228C210.462 11.2111 211.645 11.6995 212.518 12.5689C213.39 13.4383 213.88 14.6174 213.88 15.8469C213.88 17.0763 213.39 18.2555 212.518 19.1248C211.645 19.9942 210.462 20.4826 209.228 20.4826V20.4826Z"
+              fill="#03CF5D"
+            />
+          </svg>
+        </a>
+      </header>
+      <!-- 폼 - 로그인 -->
+      <form action="#void" method="post" class="login-form">
+        <fieldset>
+          <legend class="sr-only">로그인 폼</legend>
+          <div class="input">
+            <label class="input__label sr-only" for="input-4">이메일</label>
+            <input
+              class="input__input"
+              type="email"
+              id="input-4"
+              name="input-4"
+              required
+              placeholder="아이디 또는 이메일 주소를 입력하세요."
+              aria-errormessage="error-message-4"
+            />
+            <p
+              class="input__error-message"
+              id="error-message-4"
+              aria-live="polite"
+            >
+              <span>아이디를 입력해주세요</span>
+            </p>
+          </div>
+          <div class="input show-label">
+            <label class="input__label sr-only" for="input-0">비밀번호</label>
+            <input
+              class="input__input"
+              type="password"
+              pattern="(?=.*[A-Za-z])(?=.*\d)(?=.*[\W_]).{8,}"
+              id="input-0"
+              name="input-0"
+              required
+              placeholder="영문 소문자, 숫자, 특수문자 포함 최소 8자리 이상"
+              aria-errormessage="error-message-0"
+            />
+            <p
+              class="input__error-message"
+              id="error-message-0"
+              aria-live="polite"
+            >
+              <span
+                >비밀번호는 영문 소문자, 숫자, 특수문자 포함 최소 8자리 이상
+                입력해야 합니다.</span
+              >
+            </p>
+          </div>
+          <div class="checkbox-wrapper">
+            <div class="checkbox svg">
+              <input
+                class="checkbox__input"
+                type="checkbox"
+                name="checkbox-2"
+                id="checkbox-2"
+                required
+              />
+              <label class="checkbox__label svg-tag" for="checkbox-2">
+                <svg
+                  width="24"
+                  role="none"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    class="svg--area"
+                    d="M11.9764 23.4985C18.3541 23.4985 23.5242 18.3284 23.5242 11.9507C23.5242 5.57305 18.3541 0.402931 11.9764 0.402931C5.59877 0.402931 0.42865 5.57305 0.42865 11.9507C0.42865 18.3284 5.59877 23.4985 11.9764 23.4985Z"
+                    fill="white"
+                  />
+                  <path
+                    class="svg--border"
+                    d="M12.0021 24.0043C9.62833 24.0043 7.30784 23.3004 5.3341 21.9815C3.36036 20.6627 1.82201 18.7883 0.913599 16.5952C0.00518517 14.402 -0.232497 11.9888 0.230608 9.66063C0.693713 7.33244 1.83681 5.19387 3.51534 3.51534C5.19387 1.83681 7.33244 0.693713 9.66063 0.230608C11.9888 -0.232497 14.402 0.00518517 16.5952 0.913599C18.7883 1.82201 20.6627 3.36036 21.9815 5.3341C23.3004 7.30784 24.0043 9.62833 24.0043 12.0021C24.0043 15.1853 22.7398 18.2381 20.4889 20.4889C18.2381 22.7398 15.1853 24.0043 12.0021 24.0043ZM12.0021 1.28593C9.88267 1.28593 7.8108 1.91443 6.04853 3.09194C4.28626 4.26945 2.91274 5.94309 2.10166 7.90122C1.29057 9.85935 1.07836 12.014 1.49184 14.0928C1.90533 16.1715 2.92595 18.0809 4.42464 19.5796C5.92332 21.0783 7.83277 22.0989 9.91151 22.5124C11.9902 22.9259 14.1449 22.7137 16.103 21.9026C18.0612 21.0915 19.7348 19.718 20.9123 17.9557C22.0898 16.1935 22.7183 14.1216 22.7183 12.0021C22.7183 9.16002 21.5893 6.43431 19.5796 4.42464C17.57 2.41496 14.8442 1.28593 12.0021 1.28593Z"
+                    fill="#999999"
+                  />
+                  <path
+                    class="svg--mark"
+                    d="M10.6647 16.9059C10.4932 16.905 10.3286 16.8374 10.2061 16.7173L6.66974 13.1809C6.61007 13.121 6.5628 13.0499 6.53061 12.9716C6.49843 12.8934 6.48197 12.8096 6.48216 12.725C6.48236 12.6405 6.49922 12.5568 6.53177 12.4787C6.56432 12.4006 6.61193 12.3297 6.67188 12.2701C6.73183 12.2104 6.80295 12.1631 6.88117 12.1309C6.95939 12.0987 7.04318 12.0823 7.12777 12.0825C7.21235 12.0827 7.29606 12.0995 7.37413 12.1321C7.4522 12.1646 7.52309 12.2122 7.58276 12.2722L10.639 15.3285L16.5072 8.81301C16.5619 8.74483 16.6299 8.68853 16.7071 8.64753C16.7843 8.60653 16.8691 8.58171 16.9562 8.57457C17.0433 8.56743 17.131 8.57812 17.2138 8.60601C17.2966 8.63389 17.3729 8.67837 17.438 8.73673C17.5031 8.79509 17.5556 8.8661 17.5923 8.94543C17.629 9.02476 17.6491 9.11074 17.6515 9.19812C17.6538 9.28549 17.6383 9.37243 17.6059 9.45362C17.5735 9.5348 17.5249 9.60853 17.4631 9.6703L11.1448 16.6916C11.0865 16.7572 11.0153 16.8101 10.9357 16.8469C10.856 16.8838 10.7696 16.9039 10.6819 16.9059H10.6647Z"
+                    fill="#999999"
+                  />
+                </svg>
+                로그인 상태 유지
+              </label>
+            </div>
+
+            <a
+              href=#void"
+              class="text-link"
+              rel="noopenner noreferrer"
+            >
+              IP 보완
+            </a>
+
+            <div class="switch text-switch">
+              <input
+                class="switch__input"
+                role="switch"
+                type="checkbox"
+                name="switch-1"
+                id="switch-1"
+              />
+              <label class="switch__label" for="switch-1">
+                <span class="sr-only">스위치</span>
+              </label>
+            </div>
+          </div>
+          <button type="submit" class="button button--fill">로그인</button>
+        </fieldset>
+      </form>
+    </div>
   </body>
 </html>

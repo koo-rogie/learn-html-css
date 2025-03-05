@@ -1,0 +1,88 @@
+@import '/src/common/modern-reset.css';
+@import '/src/common/theme.css';
+@import '/src/common/a11y.css';
+@import '/src/common/base.css';
+
+.grid {
+  display: grid;
+  border: 1px solid var(--green-400);
+  padding: 20px;
+  margin: 20px;
+
+  div:nth-child(1) {
+    background: var(--pastel-yellow);
+  }
+  div:nth-child(2) {
+    background: var(--pastel-pink);
+  }
+  div:nth-child(3) {
+    background: var(--pastel-lavender);
+  }
+  div:nth-child(4) {
+    background: var(--red-500);
+  }
+  div:nth-child(5) {
+    background: var(--pastel-gray);
+  }
+  div:nth-child(6) {
+    background: var(--pastel-mint);
+  }
+  div:nth-child(7) {
+    background: var(--pastel-coral);
+  }
+  /* div:nth-child(8){
+    background: var(--pastel-aqua);
+  } */
+}
+
+/* 라인 기반 그리드 박스 */
+.grid-box-1 {
+  grid-template-rows: repeat(4, 50px);
+  grid-template-columns: 1fr 2fr 1fr;
+  .grid-item-1 {
+    /* 길게 쓰는 방법 */
+    grid-row-start: 1;
+    grid-column-start: 1;
+    grid-row-end: 3;
+    grid-column-end: 3;
+
+    /* 약간 줄인거 */
+    grid-row: 1 / span 2;
+    grid-column: 1 / span 2;
+
+    /* 줄인거 */
+    /* grid-area: 1 / 1 / 3 / 3; */
+  }
+  .grid-item-2 {
+    /* grid-area: 4 / 3 / 5 / 4; */
+    grid-row: 4;
+    grid-column: 3;
+  }
+
+  .grid-item-4 {
+    /* grid-area: 3 / 1 / 4 / 2; */
+    grid-row: 3;
+    grid-column: 1;
+  }
+  .grid-item-5 {
+    /* grid-area: 3/2/5/3; */
+    grid-row: 3 / span 2;
+    grid-column: 2;
+  }
+  .grid-item-6 {
+    /* grid-area: 2/3/4/4; */
+    grid-row: 2 / span 2;
+    grid-column: 3;
+  }
+  .grid-item-7 {
+    /* grid-area: 4/1/5/2; */
+    grid-row: 4;
+    grid-column: 1;
+  }
+}
+
+/* 네임 기반 그리드 박스 */
+.grid-box-2 {
+  display: grid;
+  grid-template-rows: repeat(4, 50px);
+}

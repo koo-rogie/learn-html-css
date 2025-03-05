@@ -3,22 +3,63 @@
 @import '/src/common/ally.css';
 @import '/src/common/base.css';
 
-/* 로고 컴포넌트 (img 요소) */
-.logo {
-  --size: 14.375rem;
+/* 컴포넌트 불러오기 */
+@import '/src/ui/components/logo/logo.css';
+@import '/src/ui/components/input/input.css';
+@import '/src/ui/components/checkbox/checkbox.css';
+@import '/scr/ui/components/text-link/text-link.css';
+@import '/src/ui/components/switch/switch.css';
+@import '/src/ui/components/button/button.css';
 
-  display: block;
-  width: var(--size, 14.375rem);
-  inline-size: var(--size, 14.375rem);
+.container {
+  
 }
 
-/* 로고 컴포넌트 (svg 요소) */
-.logo {
-  svg {
-    display: block;
-    width: 100%;
-    inline-size: 100%;
-    height: auto;
-    block-size: auto;
+/* 헤더 */
+.login-header {
+  padding: 70px 0 45px;
+
+  @media (min-width: 48rem) {
+    padding: 100px 0 50px;
+  }
+
+  .logo {
+    margin: 0 auto;
+
+    @media (max-width: 48rem) {
+      width: 11.25rem;
+      inline-size: 11.25rem;
+    }
+  }
+}
+
+.login-form {
+  display: flex;
+  flex-flow: column nowrap;
+  row-gap: var(--spacing-3);
+
+  fieldset {
+    display: contents;
+  }
+  .checkbox-wrapper {
+    order: 1;
+
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    /* justify-content: end; */
+    .text-link {
+      margin-left: auto;
+      margin-inline-start: auto;
+    }
+  }
+
+  .button {
+    margin-top: var(--spacing-3);
+    margin-block-start: var(--spacing-3);
+    height: 3.75rem;
+    &:focus-visible {
+      box-shadow: 0 0 0 1px var(--red-400);
+    }
   }
 }

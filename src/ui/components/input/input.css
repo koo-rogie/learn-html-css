@@ -3,40 +3,6 @@
 @import '/src/common/a11y.css';
 @import '/src/common/base.css';
 
-form {
-  display: contents;
-  fieldset {
-    border: none;
-    margin: 0;
-    padding: 0;
-    display: contents;
-  }
-}
-
-/* .input {
-  background-color: var(--blue-800);
-  position: relative;
-
-  p {
-    display: none;
-    font-size: var(--font-xs);
-    color: var(--red-500);
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    translate: 0 160%;
-  }
-  input:invalid + p {
-    display: block;
-  }  
-  input:placeholder-shown + p {
-    display: none !important;
-  }
-  input:user-invalid + p {
-    display: block;
-  }
-} */
-
 /* 입력 서식 컴포넌트 */
 .input {
   --text-color: var(--gray-600);
@@ -49,9 +15,9 @@ form {
   display: flex;
   flex-flow: row wrap;
   align-items: center;
-  row-gap: var(--spacing);
   font-size: var(--text-size);
   position: relative;
+  column-gap: var(--spacing);
 
   /* .input__label */
   label {
