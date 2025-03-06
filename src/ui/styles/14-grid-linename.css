@@ -1,0 +1,59 @@
+@import '/src/common/modern-reset.css';
+@import '/src/common/login-theme.css';
+@import '/src/common/a11y.css';
+@import '/src/common/base.css';
+@import '/src/common/theme.css';
+
+.header {
+  background-color: var(--pastel-blue);
+}
+.navigation {
+  background-color: var(--pastel-coral);
+}
+.main {
+  background-color: var(--pastel-mint);
+}
+
+.sidebar {
+  background-color: var(--pastel-yellow);
+}
+
+.footer {
+  background-color: var(--pastel-gray);
+}
+
+/* 그리드를 활동한 반응형 레이아웃 */
+/* 그리드 컨테이너 */
+/* 그리드 컨테이너 */
+.container {
+  min-height: 100vh;
+  min-block-size: 100vh;
+  display: grid;
+  grid-template-columns:
+    [full-start] minmax(1rem, 1fr)
+    [content-start] repeat(12, minmax(5.3125rem, 1fr)) [content-end]
+    minmax(1rem, 1fr)
+    [full-end];
+  grid-auto-flow: dense;
+
+  .header {
+    grid-column: content;
+  }
+  .navigation {
+    grid-column: full;
+    .menu {
+      background-color: var(--pastel-lilac);
+      grid-column: content;
+    }
+  }
+
+  .main {
+    grid-column: content;
+  }
+  .sidebar {
+    grid-column: content;
+  }
+  .footer {
+    grid-column: full;
+  }
+}

@@ -1,0 +1,64 @@
+@import '/src/common/modern-reset.css';
+@import '/src/common/theme.css';
+@import '/src/common/a11y.css';
+@import '/src/common/base.css';
+
+
+body{
+    div{
+        border: 1px solid red;
+    }
+}
+.container {
+  background-color: var(--pastel-green);
+  padding: 1em;
+  .case {
+    /* border: 1px solid var(--blue-700); */
+    margin-block: 20px;
+  }
+
+  /* case-01 : colume-widht */
+  .case-01 {
+    /* 너비 별 컬럼 의 최소 너미를 15rem 단위로 함, 그에 따라 단락이 나뉘어짐? */
+    column-width: 15rem;
+    column-rule: 1px solid var(--pastel-mauve);
+    column-gap: 2rem;
+  }
+
+  .case-02 {
+    /* 단락이 4개로 고정? */
+    column-count: 4;
+    column-rule: 1px solid var(--pastel-mauve);
+    span {
+      display: block;
+      background-color: pink;
+      padding: 0.5em;
+      column-span: all;
+    }
+  }
+  .case-03 {
+    /* columns는 (column-widht) (column-count)를 줄인 명령어 이다 */
+    columns: 5rem;
+    column-rule: 1px double var(--blue-900);
+  }
+  .case-04 {
+    /* 단락이 4개로 고정? */
+    columns: 2;
+    column-fill: balance;
+  }
+  .case-05 {
+    /* 단락이 4개로 고정? */
+    columns: 2;
+    /* column-fill: auto; */
+    /* block-size: 400px; */
+  }
+}
+
+.wrapper {
+  background: var(--pastel-lemon);
+  padding: 1em;
+  columns: 4;
+  .case {
+      break-after: always;
+  }
+}
