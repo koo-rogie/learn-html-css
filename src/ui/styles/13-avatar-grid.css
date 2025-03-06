@@ -1,0 +1,26 @@
+@import '/src/common/modern-reset.css';
+@import '/src/common/ally.css';
+@import '/src/ui/components/avatar/avatar.css';
+
+.img-avatar,
+.avatar-state {
+  position: static !important;
+}
+
+/* 그리드 활용하기 */
+
+.img-avatar {
+  background: yellow;
+  margin-bottom: 20px;
+
+  display: grid;
+
+  img,
+  figcaption {
+    grid-area: 1 /1 / 2 /2;
+  }
+
+  figcaption {
+    place-self: end;
+  }
+}

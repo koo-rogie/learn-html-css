@@ -17,7 +17,3 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
-
-window.onload = () => {};
-
-$(function () {}); 

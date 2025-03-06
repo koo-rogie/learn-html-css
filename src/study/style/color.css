@@ -1,0 +1,60 @@
+:root {
+  /* 기본색 */
+  --primary-1: #24388d;
+  --primary-2: #5b6aa9;
+  --primary-3: #919bc6;
+  --primary-4: #c8cde2;
+
+  /* 라이트 블루 */
+  --light-blue-1: #bae5fb;
+  --light-blue-2: #cbebfc;
+  --light-blue-3: #dcf2fd;
+  --light-blue-4: #eef8fe;
+
+  /* 바이올렛 */
+  --violet-5: #31287c;
+  --violet-6: #645e9d;
+  --violet-7: #9893bd;
+  --violet-8: #cbc9de;
+
+  /* 엠버 */
+  --amber-1: #d2c9b6;
+  --amber-1: #ddd6c8;
+  --amber-1: #e8e4da;
+  --amber-1: #f4f1ed;
+
+  /* 크림 */
+  --cream-1: #f4ca54;
+  --cream-2: #f7d77f;
+  --cream-3: #f9e4a9;
+  --cream-4: #fcf2d4;
+
+  /* 화이트 */
+  --white: #fefefe;
+
+  /* 스노우 */
+  --snow: #f5f5f5;
+
+  /* 그레이, 블랙 */
+  --gray: #616161;
+  --light-gray: #878787;
+  --dark-gray: #14182c;
+  --dark-black: #14182c;
+  --black: #0f0f0f;
+
+  /* 보더 */
+  /* 카사블랑카 */
+  --border-casablanca: #f6b45a;
+
+  /* 아이스버그 */
+  --border-iceberg: #d1eff1;
+
+  /* 팀블 */
+  --border-tumbleweed: #dab57e;
+
+  /* 라이트 라일락 */
+  --border-light-rail: #fcfcfe;
+
+  /* 라이트 라일락 */
+  --light-lilac: #fcfcfe;
+}

@@ -1,0 +1,37 @@
+:root {
+  /* gradient를 변수로 설정하는 것이 불가능 */
+  /* 대신 나눠서 쓰는건 가능 */
+  /* --gradient-blue: linear-gradient(43deg, #102457, #3a5abd);
+  --gradient-cream: linear-gradient(-43deg, #f4ca54, #fcf2d4);
+  --gradient-lightblue: linear-gradient(40deg, #bae5fb, #eef8fe); */
+
+  /* 그레디언트 블루 */
+  /* linear-gradient(
+    var(--gradient-blue-angle),
+    var(--gradient-blue-start),
+    var(--gradient-blue-end)
+  ); */
+  --gradient-blue-angle: 43deg;
+  --gradient-blue-start: #102457;
+  --gradient-blue-end: #3a5abd;
+
+  /* 그레디언트 크림 */
+  /* linear-gradient(
+    var(--gradient-cream-angle),
+    var(--gradient-cream-start),
+    var(--gradient-cream-end)
+  ); */
+  --gradient-cream-angle: -43deg;
+  --gradient-cream-start: #f4ca54;
+  --gradient-cream-end: #fcf2d4;
+
+  /* 그레디언트 라이트 블루 */
+  /* linear-gradient(
+    var(--gradient-lightblue-angle),
+    var(--gradient-lightblue-start),
+    var(--gradient-lightblue-end)
+  ); */
+  --gradient-lightblue-angle: 40deg;
+  --gradient-lightblue-start: #bae5fb;
+  --gradient-lightblue-end: #eef8fe;
+}

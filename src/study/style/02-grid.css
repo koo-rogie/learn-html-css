@@ -1,0 +1,72 @@
+@import '/src/common/modern-reset.css';
+@import '/src/common/theme.css';
+@import '/src/common/a11y.css';
+@import '/src/common/base.css';
+
+/* .container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 10px;
+  width: 300px;
+  margin: auto;
+}
+
+.item {
+  background-color: lightblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.item:nth-child(1) {
+  grid-column: 1 / span 2;
+}
+
+.item:nth-child(4) {
+  grid-row: 2 / span 1;
+  grid-column: 2 / span 2;
+} */
+
+.container {
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
+  justify-content: space-evenly;
+}
+
+.item1 {
+  background-color: red;
+}
+
+.item2 {
+  background-color: skyblue;
+}
+
+.item3 {
+  background-color: purple;
+}
+.item4 {
+  background-color: green;
+}
+.item5 {
+  background-color: blue;
+}
+
+.item6 {
+  background-color: blue;
+}
+.item7 {
+  background-color: blue;
+}
+.item8 {
+  background-color: blue;
+}
+.item9 {
+  background-color: blue;
+}
+.item10 {
+  background-color: blue;
+}
