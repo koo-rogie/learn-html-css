@@ -12,7 +12,6 @@ body {
   --dark-color: var(--pastel-green);
 
   background-color: var(--pastel-pink);
-  background: linear-gradient(to right #fff 100% #000 0%);
   color: #000;
   margin: 50px;
   @media (prefers-color-scheme: dark) {
